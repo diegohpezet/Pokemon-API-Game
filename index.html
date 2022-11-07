@@ -14,15 +14,15 @@
     <nav class="navbar navbar-light bg-light mb-3">
         <div class="container-fluid">
           <a class="navbar-brand text-center" href="#">PokeHigher or PokeLower</a>
-          <button class="btn btn-primary rounded-pill trigger d-flex justify-content-end"><i class="fa-solid fa-question"></i></button>
+          <button class="btn btn-primary rounded-pill trigger d-flex justify-content-end" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-question"></i></button>
         </div>
     </nav>
     <div class="container">
-        <div class="d-flex justify-content-center" id="points">Points: 0</div>
+        <div class="d-flex justify-content-center display-3" id="points">Points: 0</div>
         <div class="table mt-2" id="held">
-            <div class="row m-1 p-1" style="border: solid 1px white; border-radius: 5px;">
-                <button class="col-md btn text-light" id="type_1"></button>
-                <button class="col-md btn text-light" id="type_2"></button>
+            <div class="row m-1 p-1">
+                <button class="col-md-6 btn text-light" id="type_1" style="height: 35rem; border: solid 5px white; "><img src="" id="img_1" class="m-auto" style="width: 20rem;"></button>
+                <button class="col-md-6 btn text-light" id="type_2" style="height: 35rem; border: solid 5px white; "><img src="" id="img_2" class="m-auto" style="width: 20rem;"></button>
             </div>
         </div>
     </div>
@@ -30,8 +30,28 @@
         <!--Contiene la respuesta-->
     </div>
 </body>
-</html>
 
-<script src="api/test.js"></script>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-dark">
+          <h5 class="modal-title" id="exampleModalLabel">¿How to play?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-dark">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">¡Let's go!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </html>
+
+<script src="api/choose.js"></script>
+<script src="api/battle.js"></script>
 
 
