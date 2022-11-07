@@ -36,8 +36,8 @@ chooseTypes().then(([type_1, type_2]) => {
     container_1.style.backgroundColor = "var(--"+type_1+")"
     container_2.style.backgroundColor = "var(--"+type_2+")"
     //Sets images of containers
-    img_1.src=`./img/types/${type_1}.png`
-    img_2.src=`./img/types/${type_2}.png`
+    img_1.src=`../img/types/${type_1}.png`
+    img_2.src=`../img/types/${type_2}.png`
     
 })
 
