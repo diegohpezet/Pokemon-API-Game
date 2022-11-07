@@ -12,8 +12,11 @@ export default function handler(request,response){
         result.isCorrect = true
     } 
     
-    if(!result.isCorrect)
+    if(!result.isCorrect){
         result.expectedType = attackingType
+    }
+
+    console.log(result)
 
     response.status(200).json({
         result
