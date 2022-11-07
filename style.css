@@ -1,29 +1,29 @@
 :root {
-    --bug: darkolivegreen;
-    --dark: indigo;
-    --dragon: royalblue;
-    --electric: gold;
-    --fairy: fuchsia;
-    --fighting: brown;
-    --fire: orange;
-    --flying: deepskyblue;
-    --ghost: blueviolet;
-    --grass: green;
-    --ground: bisque;
-    --ice: lightskyblue;
-    --normal: gainsboro;
-    --poison: darkorchid;
-    --psychic: deeppink;
-    --rock: peru;
-    --steel: dimgrey;
-    --water: mediumblue;
+    --bug: #80a828;
+    --dark: #3a1b54;
+    --dragon: #364bac;
+    --electric: #cbb211;
+    --fairy: #c074b7;
+    --fighting: #be3d60;
+    --fire: #dc931a;
+    --flying: #97b6f0;
+    --ghost: #142896;
+    --grass: #3bb027;
+    --ground: #C66437;
+    --ice: #4cb3ae;
+    --normal: #6a6a6a;
+    --poison: #a73dbe;
+    --psychic: #ff6b72;
+    --rock: #cdad77;
+    --steel: #327a96;
+    --water: #3599f0;
     }
 
 *{
     margin:0;
 }
 body {
-    background-color: rgb(54, 54, 54);
+    background-color: #FFD899;
     color: white;
 }
 
@@ -32,8 +32,34 @@ body {
     margin-top: 150px;
 }
 
-
-button{
-    color:white;
+nav{
+    background: radial-gradient(50% 2660.9% at 51.95% 50%, #9F7049 0%, #804F2E 56.32%, #6A381B 99.37%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 25px;
+    
+    color: #FFD899;
+}
+.nav fa-solid fa-circle-question{
+    color: #FFD899;
 }
 
+.container button{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#HTP{
+    backdrop-filter: blur(2px);
+}
+
+#HTP .modal-content{
+    background: radial-gradient(67.73% 3751.22% at 51.95% 50%, rgba(155, 202, 236, 0.75) 0%, rgba(97, 151, 198, 0.75) 66.13%, rgba(51, 95, 141, 0.75) 99.37%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+backdrop-filter: blur(2px);
+}
+
+#HTP .modal-footer button{
+    background: #95E394;
+    color: #156437;
+}
