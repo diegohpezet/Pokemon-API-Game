@@ -5,7 +5,8 @@ export default function handler(request,response){
     /* Evaluar tipos */
 
     let result = {
-        isCorrect: false
+        isCorrect: false,
+        expectedType: false
     }
 
     if (attackingType = "fire") {
