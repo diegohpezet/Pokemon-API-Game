@@ -3,7 +3,7 @@ function battle(type1, type2) {
     .then((response) => response.json())
     .then((data) => {
         console.log(data.result.isCorrect)
-        if (data.result.isCorrect === true) {
+        if (data.result.isCorrect {
             console.log("True")
         } else {
             console.log("False")
