@@ -1,8 +1,8 @@
 export default function handler(request,response){
-    const attackingType = request.query.type1
-    const defendingType = request.query.type2
+    let attackingType = request.query.type1
+    let defendingType = request.query.type2
 
-    /* Evaluar tipos */
+    /* Evaluate types */
 
     let result = {
         isCorrect: false,
@@ -18,6 +18,8 @@ export default function handler(request,response){
     }
 
     console.log(result)
+
+    /* Generate response */
 
     response.status(200).json({
         result
