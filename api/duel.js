@@ -9,7 +9,7 @@ export default function handler(request,response){
         expectedType: false
     }
 
-    if (attackingType = "fire") {
+    if (attackingType === "fire") {
         result.isCorrect = true
     } 
     
