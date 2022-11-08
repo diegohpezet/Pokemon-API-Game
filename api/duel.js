@@ -11,10 +11,12 @@ export default function handler(request,response){
 
     if (attackingType === "fire") {
         result.isCorrect = true
+        resultContainer.innerText = "Win"
     } 
     
     if(!result.isCorrect){
         result.expectedType = attackingType
+        resultContainer.innerText = "Lose"
     }
 
     console.log(result)
