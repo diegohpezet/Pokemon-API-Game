@@ -4,9 +4,9 @@ function battle(type1, type2) {
     .then((data) => {
         console.log(data.result.isCorrect)
         if (data.result.isCorrect) {
-            console.log("True")
+            resultContainer.innerText = "Win"
         } else {
-            console.log("False")
+            resultContainer.innerText = "Lose"
         }
     })
 }
