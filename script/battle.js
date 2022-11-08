@@ -10,7 +10,7 @@ function battle(type1, type2) {
         if (data.result.isCorrect) {
             resultContainer.innerText = "Win"
             points++
-            resultContainer.innerText = "Points " + points
+            pointCounter.innerText = "Points " + points
         } else {
             resultContainer.innerText = "Lose"
         }
