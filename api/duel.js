@@ -11,7 +11,7 @@ export default async function handler(request, response) {
     let pokeApiRes = await fetch(url);
     let data = await pokeApiRes.json();
 
-    /* Evaluates strengths */
+    /* Evaluate strengths */
 
     let super_effective_against = data.damage_relations.double_damage_to;
     let hits_hard = [];
@@ -20,8 +20,8 @@ export default async function handler(request, response) {
       hits_hard.push(strength.name);
     });
 
-
-    // Evaluates wekanesses //
+    /* Evaluate wekanesses */
+    
     let super_effective_from = data.damage_relations.double_damage_from;
     let gets_destroyed = [];
 
@@ -29,12 +29,14 @@ export default async function handler(request, response) {
         gets_destroyed.push(weakness.name)
     })
 
-    /* Evaluate types */
+    /* Generate a result object */
 
     let result = {
-      isCorrect: false,
-      expectedType: false,
-    };
+        isCorrect: false,
+        expectedType: false,
+      };
+
+    /* Evaluate types */
 
     if (hits_hard.includes(defendingType)) {
       result.isCorrect = true;
