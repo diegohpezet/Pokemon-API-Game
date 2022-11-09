@@ -51,7 +51,6 @@ export default async function handler(request, response) {
       if (!hits_hard.includes(defendingType) && !gets_destroyed.includes(defendingType)){
         result.isCorrect = true;
       } else {
-        result.isCorrect = false;
         expectedType = attackingType;
       }
     }
