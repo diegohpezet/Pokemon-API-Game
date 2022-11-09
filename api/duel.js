@@ -22,6 +22,12 @@ export default async function handler(request, response) {
 
 
     // Evaluates wekanesses //
+    let super_effective_from = data.damage_relations.double_damage_from;
+    let gets_destroyed = [];
+
+    super_effective_from.forEach((weakness) => {
+        gets_destroyed.push(weakness.name)
+    })
 
     /* Evaluate types */
 
@@ -45,6 +51,7 @@ export default async function handler(request, response) {
     response.status(200).json({
       result,
       hits_hard,
+      gets_destroyed,
     });
   } catch (err) {
     console.error(err);
