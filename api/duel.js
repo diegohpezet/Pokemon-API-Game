@@ -8,8 +8,9 @@ export default async function handler(request,response){
         let url = `https://pokeapi.co/api/v2/type/${attackingType}`
     
         const pokeApiRes = await fetch(url)
-        console.log(pokeApiRes)
-           
+        const data = await pokeApiRes.json()
+
+        
         /* Evaluate types */
     
         let result = {
@@ -30,7 +31,7 @@ export default async function handler(request,response){
         /* Generate response */
     
         response.status(200).json({
-            result
+            result, data
         });
       } catch (err) {
          console.error(err)
