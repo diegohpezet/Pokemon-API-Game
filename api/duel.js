@@ -5,7 +5,7 @@ export default function handler(request,response){
     let url = `https://pokeapi.co/api/v2/type/${attackingType}`
     
     fetch(url)
-        .then((response) => response.json())
+        .then((respons) => respons.json())
         .then((data) => console.log(data));
     
     /* Evaluate types */
