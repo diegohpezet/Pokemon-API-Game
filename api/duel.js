@@ -3,7 +3,7 @@ export default function handler(request,response){
     let defendingType = request.query.type2
     
     let fetchedType = fetch(`https://pokeapi.co/api/v2/type/${attackingType}`)
-    let data = fetchedType.damage_relations
+    let data = fetchedType.json()
 
     console.log(data)
     
