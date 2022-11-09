@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+const fetch = require("node-fetch")
 
 export default function handler(request,response){
     let attackingType = request.query.type1
