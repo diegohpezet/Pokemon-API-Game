@@ -16,9 +16,12 @@ export default async function handler(request, response) {
     let super_effective_against = data.damage_relations.double_damage_to;
     let hits_hard = [];
 
-    super_effective_against.forEach((element) => {
-      hits_hard.push(element.name);
+    super_effective_against.forEach((strength) => {
+      hits_hard.push(strength.name);
     });
+
+
+    // Evaluates wekanesses //
 
     /* Evaluate types */
 
