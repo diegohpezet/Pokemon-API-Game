@@ -33,6 +33,6 @@ export default async function handler(request,response){
             result
         });
       } catch (err) {
-         console.log(err)
+         console.error(err)
       }
 }
