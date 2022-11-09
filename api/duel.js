@@ -5,12 +5,14 @@ export default async function handler(request,response){
         let attackingType = request.query.type1
         let defendingType = request.query.type2
     
+        /* Fetch data from chosen type */
         let url = `https://pokeapi.co/api/v2/type/${attackingType}`
     
-        const pokeApiRes = await fetch(url)
-        const data = await pokeApiRes.json()
+        let pokeApiRes = await fetch(url)
+        let data = await pokeApiRes.json()
 
-        
+        let hits_hard = data.damage_relations.double_damage_to
+
         /* Evaluate types */
     
         let result = {
@@ -31,9 +33,10 @@ export default async function handler(request,response){
         /* Generate response */
     
         response.status(200).json({
-            result, data
+            result, hits_hard
         });
       } catch (err) {
          console.error(err)
       }
 }
+
