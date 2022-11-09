@@ -2,8 +2,8 @@ const resultContainer = document.getElementById("result")
 const pointCounter = document.getElementById("points")
 let points = 0
 
-function battle(type1, type2) {
-    fetch(`https://pokemon-api-game.vercel.app/api/duel?type1=${type1}&type2=${type2}`)
+function battle(type1, type2, option) {
+    fetch(`https://pokemon-api-game.vercel.app/api/duel?type1=${type1}&type2=${type2}&option=${option}`)
     .then((response) => response.json())
     .then((data) => {
         console.log(data.result.isCorrect)
@@ -14,6 +14,7 @@ function battle(type1, type2) {
             chooseTypes()
         } else {
             resultContainer.innerText = "Lose"
+            chooseTypes()
         }
     })
 }
