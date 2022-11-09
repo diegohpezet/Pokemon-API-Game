@@ -22,36 +22,35 @@ export default async function handler(request, response) {
 
     /* Evaluate Weaknesses */
 
-    let super_effective_from = data.damage_relations - double_damage_from;
-    let gets_destroyed = [];
+    let super_effective_from = data.damage_relations-double_damage_from
+    let gets_destroyed = []
 
     super_effective_from.forEach((element) => {
-      gets_destroyed.push(element.name);
-    });
+        gets_destroyed.push(element.name)
+    })
 
-    /* Create result object */
 
-    let result = {
-      isCorrect: false,
-      expectedAnswer: false,
-    };
+    
 
     /* Check answer */
 
+    
+
     if (hits_hard.includes(defendingType)) {
       result.isCorrect = true;
-    } else if (gets_destroyed.includes(defendingType)) {
-      result.expectedAnswer = defendingType;
-    } else {
-      result.expectedAnswer = "x1"
-    } 
+    }
+
+    if (!result.isCorrect) {
+      result.expectedType = defendingType;
+    }
+
+    console.log(result);
 
     /* Generate response */
 
     response.status(200).json({
       result,
       hits_hard,
-      gets_destroyed,
     });
   } catch (err) {
     console.error(err);
