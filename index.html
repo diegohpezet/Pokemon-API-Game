@@ -14,30 +14,18 @@
 <body>
     <nav class="navbar mb-3">
         <div class="container-fluid">
-          <h1 class="navbar-brand">PokeHigher or PokeLower</h1>
-          <button class="btn btn-lg rounded-pill d-flex justify-content-end" data-bs-toggle="modal" data-bs-target="#HTP" title=Help><i class="fa-solid fa-circle-question" style="color: #FFD899"></i></button>
+          <h1 class="navbar-brand col-1">PokeHigher or PokeLower</h1>
+          <button class="btn btn-lg col-1 rounded-pill d-flex justify-content-end" data-bs-toggle="modal" data-bs-target="#HTP" title=Help><i class="fa-solid fa-circle-question" style="color: #FFD899"></i></button>
         </div>
     </nav>
+
     <div class="container">
-        <div class="d-flex justify-content-center display-3" id="points">Points: 0</div>
-        
-        <div class="d-flex justify-content-center display-5" id="result"></div>
-        
+        <p class="d-flex justify-content-center" id="points" title=Points>Points: 0</p>
         <div class="table mt-2" id="held">
-            <div class="row m-1 p-1">
-                
-                <button class="col-md-4 btn text-light rounded-pill m-auto" id="type_1" style="height: 35rem;">
-                  <img src="" id="img_1" class="m-auto" title=Type-1>
-                </button>
-                
-                <div class="col-md-4 d-flex align-items-center">
-                  <img src="img/vs.png" id="vs" class="m-auto" style="width: 25rem;"  title=Versus-Image>
-                </div>
-                
-                <button class="col-md-4 btn text-light rounded-pill" id="type_2" style="height: 35rem;">
-                  <img src="" id="img_2" class="m-auto" title=Type-2>
-                </button>
-                
+            <div class="row m-2 p-2">
+                <button class="col-12 col-md-4 btn rounded-pill" id="type_1"><img src="" id="img_1" class="w-75 p-3" title=Type-1></button>
+                <div class="col-12 col-md-4 d-flex justify-content-center"><img src="img/vs.png" id="vs" class="img-fluid"  title=Versus-Image></div>
+                <button class="col-12 col-md-4 btn rounded-pill" id="type_2"><img src="" id="img_2" class="w-75 p-3" title=Type-2></button>
             </div>
         </div>
     </div>
@@ -65,7 +53,7 @@
   </div>
   </html>
 
-<script src="script/choose.js"></script>
-<script src="script/battle.js"></script>
+<script src="api/choose.js"></script>
+<script src="api/battle.js"></script>
 
 
