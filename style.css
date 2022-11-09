@@ -25,11 +25,11 @@
 body {
     background-color: #FFD899;
     color: white;
+    min-width: 320px;
 }
 
 .container p{
     color: #6A381B;
-    font-size: 20px;
     font-weight: 700;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -44,7 +44,6 @@ nav{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
     line-height: 25px;
     
     color: #FFD899;
@@ -61,10 +60,19 @@ nav{
 
 #HTP .modal-content{
     background: radial-gradient(67.73% 3751.22% at 51.95% 50%, rgba(155, 202, 236, 0.75) 0%, rgba(97, 151, 198, 0.75) 66.13%, rgba(51, 95, 141, 0.75) 99.37%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
 }
 
 #HTP .modal-footer button{
     background: #95E394;
     color: #156437;
+}
+
+#loseModal {
+    backdrop-filter: blur(2px);
+}
+
+#loseModal .modal-header{
+    background: radial-gradient(67.73% 3751.22% at 51.95% 50%, rgba(196, 34, 34, 0.75) 0%, rgba(212, 14, 14, 0.75) 66.13%, rgba(255, 0, 0, 0.75) 99.37%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    backdrop-filter: blur(2px);
 }

@@ -16,7 +16,7 @@ function battle(type1, type2, option) {
             chooseTypes()
         } else {
             resultContainer.innerText = "Lose"
-            expectedTypeContainer.innerHTML = `The correct answer was: ${result.expectedType}`
+            expectedTypeContainer.innerHTML = `The correct answer was: ${result}`
             $("#loseModal").modal("show");
         }
     })
