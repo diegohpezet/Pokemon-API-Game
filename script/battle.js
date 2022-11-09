@@ -1,5 +1,7 @@
 const resultContainer = document.getElementById("result")
+const expectedTypeContainer = document.getElementById("correctType")
 const pointCounter = document.getElementById("points")
+
 let points = 0
 
 function battle(type1, type2, option) {
@@ -14,7 +16,8 @@ function battle(type1, type2, option) {
             chooseTypes()
         } else {
             resultContainer.innerText = "Lose"
-            chooseTypes()
+            expectedTypeContainer.innerHTML = `The correct answer was: ${result.expectedType}`
+            $("#loseModal").modal("show");
         }
     })
 }
