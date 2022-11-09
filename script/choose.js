@@ -36,13 +36,14 @@ async function chooseTypes() {
     return [type_1, type_2]
 }*/
 
+/* Chooses two different types from list types list*/
 async function chooseTypes() {
     let type_1 = types[Math.floor(Math.random()*types.length)];
     let type_2 = types[Math.floor(Math.random()*types.length)];
-    while (type_1===type_2){
-           type_2 = types[Math.floor(Math.random()*types.length)];
-        }
-        return [type_1, type_2]
+    while (type_1===type_2) {
+       type_2 = types[Math.floor(Math.random()*types.length)];
+    }
+    return [type_1, type_2]
 }
 
 chooseTypes().then(([type_1, type_2]) => {
