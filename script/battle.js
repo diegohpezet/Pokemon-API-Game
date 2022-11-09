@@ -14,7 +14,7 @@ function battle(type1, type2, option) {
         if (data.result.isCorrect) {
             resultContainer.innerText = messages[Math.floor(Math.random() * messages.length)];
             points++
-            pointCounter.innerText = "Points " + points
+            pointCounter.innerText = "Points: " + points
             chooseTypes()
         } else {
             resultContainer.innerText = "Lose"
