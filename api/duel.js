@@ -36,7 +36,7 @@ export default async function handler(request, response) {
       isCorrect: false,
       expectedType: false,
     };
-    
+
     /* Evaluate types */
 
     if (option != "x1") {
@@ -51,14 +51,14 @@ export default async function handler(request, response) {
       if (!hits_hard.includes(defendingType) && !gets_destroyed.includes(defendingType)){
         result.isCorrect = true;
       } else {
-        expectedType = attackingType;
+        result.expectedType = attackingType;
       }
     }
 
     /* Generate response */
 
     response.status(200).json({
-      result,
+      result
     });
   } catch (err) {
     console.error(err);
