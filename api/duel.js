@@ -6,10 +6,9 @@ export default function handler(request,response){
     
     url = `https://pokeapi.co/api/v2/type/${attackingType}`
 
-    
-    fetch(url)
-        .then(response => response.json())
-        .then(data => console.log(data))
+   
+    const pokeApiRes = await fetch(url)
+    console.log(pokeApiRes)
     
     /* Evaluate types */
 
