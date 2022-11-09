@@ -36,7 +36,7 @@ export default async function handler(request, response) {
       isCorrect: false,
       expectedType: false,
     };
-
+    
     /* Evaluate types */
 
     if (option != "x1") {
@@ -48,7 +48,12 @@ export default async function handler(request, response) {
         result.expectedType = "x1";
       }
     } else {
+      if (!hits_hard.includes(defendingType) && !gets_destroyed.includes(defendingType)){
         result.isCorrect = true;
+      } else {
+        result.isCorrect = false;
+        expectedType = attackingType;
+      }
     }
 
     /* Generate response */
