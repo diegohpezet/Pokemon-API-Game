@@ -2,11 +2,11 @@ export default function handler(request,response){
     let attackingType = request.query.type1
     let defendingType = request.query.type2
     
-    fetch(`https://pokeapi.co/api/v2/type/${attackingType}`)
+    let url = `https://pokeapi.co/api/v2/type/${attackingType}`
+    
+    fetch(url)
         .then((response) => response.json())
         .then((data) => console.log(data));
-
-    console.log(data)
     
     /* Evaluate types */
 
