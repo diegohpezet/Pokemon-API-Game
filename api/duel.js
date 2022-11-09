@@ -60,8 +60,6 @@ export default async function handler(request, response) {
 
     response.status(200).json({
       result,
-      hits_hard,
-      gets_destroyed,
     });
   } catch (err) {
     console.error(err);
