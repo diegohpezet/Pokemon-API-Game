@@ -11,6 +11,7 @@ function battle(type1, type2) {
             resultContainer.innerText = "Win"
             points++
             pointCounter.innerText = "Points " + points
+            chooseTypes()
         } else {
             resultContainer.innerText = "Lose"
         }
