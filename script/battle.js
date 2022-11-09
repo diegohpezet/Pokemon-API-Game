@@ -2,6 +2,8 @@ const resultContainer = document.getElementById("result")
 const expectedTypeContainer = document.getElementById("correctType")
 const pointCounter = document.getElementById("points")
 
+const messages = ["Nice!", "Perfect!", "That one was easy", "Well done", "Keep going!"]
+
 let points = 0
 
 function battle(type1, type2, option) {
@@ -10,7 +12,7 @@ function battle(type1, type2, option) {
     .then((data) => {
         console.log(data.result.isCorrect)
         if (data.result.isCorrect) {
-            resultContainer.innerText = "Win"
+            resultContainer.innerText = messages[Math.floor(Math.random() * messages.length)];
             points++
             pointCounter.innerText = "Points " + points
             chooseTypes()
