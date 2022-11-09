@@ -22,7 +22,7 @@ export default async function handler(request, response) {
 
     /* Evaluate Weaknesses */
 
-    let super_effective_from = data.damage_relations - double_damage_from;
+    let super_effective_from = data.damage_relations.double_damage_from;
     let gets_destroyed = [];
 
     super_effective_from.forEach((element) => {
