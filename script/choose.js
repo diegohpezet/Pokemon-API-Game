@@ -41,10 +41,10 @@ function chooseTypes() {
     img_1.src=`./img/types/${type_1}.png`
     img_2.src=`./img/types/${type_2}.png`
 
-    //Generates an onclick event
-    container_1.setAttribute("onclick",`battle('${type_1}','${type_2}','${type_1}'')`)
-    container_2.setAttribute("onclick",`battle('${type_2}','${type_1}','${type_2}'')`)
-    vs.setAttribute("onclick",`battle('${type_2}','${type_1}','x1'')`)
+//Generates an onclick event
+    container_1.setAttribute("onclick",`battle('${type_1}','${type_2}','${type_1}')`)
+    container_2.setAttribute("onclick",`battle('${type_2}','${type_1}','${type_2}')`)
+    vs.setAttribute("onclick",`battle('${type_2}','${type_1}','x1')`)
 }
 
 chooseTypes()
