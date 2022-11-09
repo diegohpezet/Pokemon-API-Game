@@ -5,7 +5,7 @@ export default async function handler(request,response){
         let attackingType = request.query.type1
         let defendingType = request.query.type2
     
-        url = `https://pokeapi.co/api/v2/type/${attackingType}`
+        let url = `https://pokeapi.co/api/v2/type/${attackingType}`
     
         const pokeApiRes = await fetch(url)
         console.log(pokeApiRes)
