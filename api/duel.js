@@ -16,21 +16,19 @@ export default async function handler(request, response) {
     let super_effective_against = data.damage_relations.double_damage_to;
     let hits_hard = [];
 
-    super_effective_against.forEach((strength) => {
-      hits_hard.push(strength.name);
+    super_effective_against.forEach((element) => {
+      hits_hard.push(element.name);
     });
 
-    /*
-    // Evaluate Weaknesses //
+    /* Evaluate Weaknesses 
 
     let super_effective_from = data.damage_relations.double_damage_from;
     let gets_destroyed = [];
 
-    super_effective_from.forEach((weakness) => {
-      gets_destroyed.push(weakness.name);
+    super_effective_from.forEach((element) => {
+      gets_destroyed.push(element.name);
     });
-    
-    */
+
     /* Check answer */
 
     if (hits_hard.includes(defendingType)) {
