@@ -20,7 +20,8 @@ export default async function handler(request, response) {
       hits_hard.push(strength.name);
     });
 
-    /* Evaluate Weaknesses */
+    /*
+    // Evaluate Weaknesses //
 
     let super_effective_from = data.damage_relations.double_damage_from;
     let gets_destroyed = [];
@@ -28,7 +29,8 @@ export default async function handler(request, response) {
     super_effective_from.forEach((weakness) => {
       gets_destroyed.push(weakness.name);
     });
-
+    
+    */
     /* Check answer */
 
     if (hits_hard.includes(defendingType)) {
