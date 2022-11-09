@@ -40,13 +40,11 @@ export default async function handler(request, response) {
 
     if (hits_hard.includes(defendingType)) {
       result.isCorrect = true;
+    } else if (gets_destroyed.includes(defendingType)) {
+        result.expectedType = defendingType;
+    } else {
+        result.expectedType = "x1"
     }
-
-    if (!result.isCorrect) {
-      result.expectedType = defendingType;
-    }
-
-    console.log(result);
 
     /* Generate response */
 
