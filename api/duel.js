@@ -1,6 +1,12 @@
+import fetch from 'node-fetch'
+
 export default function handler(request,response){
     let attackingType = request.query.type1
     let defendingType = request.query.type2
+    
+    fetch(url)
+        .then(response => response.json())
+        .then(data => console.log(data))
     
     /* Evaluate types */
 
