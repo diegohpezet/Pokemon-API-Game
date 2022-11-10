@@ -1,8 +1,8 @@
 const container_1 = document.getElementById("type_1");
 const container_2 = document.getElementById("type_2");
+const container_neutral = document.getElementById("x1")
 const img_1 = document.getElementById("img_1")
 const img_2 = document.getElementById("img_2")
-const vs = document.getElementById("vs")
 
 types = [
     "normal",
@@ -44,7 +44,7 @@ function chooseTypes() {
     //Generates an onclick event
     container_1.setAttribute("onclick",`battle('${type_1}','${type_2}','${type_1}')`)
     container_2.setAttribute("onclick",`battle('${type_2}','${type_1}','${type_2}')`)
-    vs.setAttribute("onclick",`battle('${type_2}','${type_1}','x1')`)
+    container_neutral.setAttribute("onclick",`battle('${type_2}','${type_1}','x1')`)
 }
 
 chooseTypes()
