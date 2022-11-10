@@ -76,3 +76,12 @@ nav{
     background: radial-gradient(67.73% 3751.22% at 51.95% 50%, rgba(196, 34, 34, 0.75) 0%, rgba(212, 14, 14, 0.75) 66.13%, rgba(255, 0, 0, 0.75) 99.37%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     backdrop-filter: blur(2px);
 }
+
+#x1 {
+    background: #b8b8b8;
+
+}
+
+#result {
+    color: #6A381B;
+}

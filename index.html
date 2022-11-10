@@ -28,9 +28,12 @@
         </div>
         
         <div class="table mt-2" id="held">
-            <div class="row m-2 p-2">
+            <div class="row d-flex justify-content-center p-2">
+              <button class="col-3 col-md-1 btn rounded-pill order-md-last mb-4" id="x1">
+                <p class="h-50" title=x1>x1</p>
+              </button>
                 <button class="col-12 col-md-4 btn rounded-pill" id="type_1">
-                    <img src="" id="img_1" class="w-75 p-3" title=Type-1>
+                    <img src="" id="img_1" class="w-75" title=Type-1>
                 </button>
                 
                 <div class="col-12 col-md-4 d-flex justify-content-center">
@@ -38,7 +41,7 @@
                 </div>
                 
                 <button class="col-12 col-md-4 btn rounded-pill" id="type_2">
-                    <img src="" id="img_2" class="w-75 p-3" title=Type-2>
+                    <img src="" id="img_2" class="w-75" title=Type-2>
                 </button>
             </div>
         </div>
@@ -48,7 +51,7 @@
 
 
 <!--Help Modal-->
-<div class="modal" id="HTP" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal" id="HTP" tabindex="-1" aria-labelledby="exampleModalLabel" aria-disabled="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -67,11 +70,11 @@
 
 
 <!--On-losing Modal-->
-  <div class="modal"  data-bs-backdrop="static" data-bs-keyboard="false" id="loseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal" id="loseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">You have lost</h5>
+          <h5 class="modal-title" id="exampleModalLabel">You've lost</h5>
         </div>
         <div class="modal-body text-dark" id="correctType">
           The correct answer was: 
