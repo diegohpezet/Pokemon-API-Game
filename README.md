@@ -18,6 +18,8 @@ El usuario deberá escoger qué tipo gana cada enfrentamiento, clickeando en su 
 
 Hay veces que los tipos no necesariamente se relacionan entre sí, en ese caso se habla de una relación x1 o neutral. Esto también hay que tenerlo en cuenta
 
+<img src="https://github.com/diegohpezet/Pokemon-API-Game/blob/main/img/Preview.PNG?raw=true">
+
 ## Alumnos
 
 <table>
